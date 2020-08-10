@@ -21,7 +21,7 @@ encoder = preprocessing.LabelEncoder()
 
 masterData['gender_encoded']=encoder.fit_transform(masterData.Sex)
 
-tree_model=tree.DecisionTreeClassifier(max_depth=...)
+tree_model=tree.DecisionTreeClassifier(max_depth=8)
 
 columnsToConsider=['gender_encoded','Age','Fare']
 tree_model.fit(masterData[columnsToConsider],masterData.Survived)
